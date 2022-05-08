@@ -1,13 +1,16 @@
 import React from "react";
-import { GlobalProvider } from "./globalContext";
+import { GlobalProvider } from "./GlobalContextProvider";
+import { themeMeta, useGlobalContext } from "./useGlobalContext";
 import { AppLayout } from "./layoutComponents/AppLayout";
-import "./styles.css";
 import { Usecase1 } from "./usecase1/Usecase1";
 
 export default function App() {
+  // able to override the context
+  const globalContext = useGlobalContext({ theme: themeMeta.light });
+
   return (
-    // as provider is a component, we can put the state to provider, instead of in the app
-    <GlobalProvider>
+    // put combined context to provider
+    <GlobalProvider value={globalContext}>
       <AppLayout>
         <Usecase1 />
       </AppLayout>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { GlobalContext } from "../globalContext";
+import { GlobalContext } from "../GlobalContextProvider";
 import { AppBar } from "./AppBar";
 
 export const AppLayout = function ({ children }) {
