@@ -13,6 +13,9 @@ export const themeMeta = {
   }
 };
 
+// todo, put too many state to global provider may affect the performance
+// aa one changed, all listeners will be notified
+// we can split to more providers for more simpler responsiblity
 const getInitialState = (initialState) => {
   return {
     theme: themeMeta.dark,
