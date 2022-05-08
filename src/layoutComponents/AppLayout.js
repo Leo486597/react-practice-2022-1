@@ -1,9 +1,10 @@
-import { useContext } from "react";
-import { GlobalContext } from "../GlobalContextProvider";
+import { ErrorAlert } from "../sharedComponents/ErrorAlert";
+import { Loader } from "../sharedComponents/Loader";
+import { useGlobalContext } from "../useGlobalContext";
 import { AppBar } from "./AppBar";
 
 export const AppLayout = function ({ children }) {
-  const { theme } = useContext(GlobalContext);
+  const { theme } = useGlobalContext();
 
   return (
     <div
@@ -13,6 +14,11 @@ export const AppLayout = function ({ children }) {
       }}
     >
       <AppBar />
+
+      {/* global shared components registered here and controlled by global context */}
+      <ErrorAlert />
+
+      <Loader />
 
       {children}
     </div>

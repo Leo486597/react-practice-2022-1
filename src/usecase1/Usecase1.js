@@ -1,5 +1,10 @@
+import React from "react";
+import { useGlobalContext } from "../useGlobalContext";
+
 export function Usecase1() {
-  return (
+  const { userPermissions } = useGlobalContext();
+
+  return userPermissions?.usecase1 ? (
     <>
       <div>
         <div>
@@ -7,5 +12,5 @@ export function Usecase1() {
         </div>
       </div>
     </>
-  );
+  ) : null;
 }

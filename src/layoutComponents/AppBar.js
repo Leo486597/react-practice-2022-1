@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { GlobalContext } from "../GlobalContextProvider";
-import { globalReducerActions } from "../useGlobalContext";
+import { globalReducerActions, useGlobalContext } from "../useGlobalContext";
 
 const StyledAppBar = styled.div`
   height: 100;
@@ -11,14 +10,14 @@ const StyledAppBar = styled.div`
 `;
 
 export function AppBar() {
-  const { dispatch } = React.useContext(GlobalContext);
+  const { dispatch } = useGlobalContext();
 
   return (
     <StyledAppBar>
       <p>Coinbase </p>
       <button
         onClick={() => {
-          dispatch({ type: globalReducerActions.toggle });
+          dispatch({ type: globalReducerActions.toggleTheme });
         }}
       >
         toggle theme
