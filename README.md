@@ -3,9 +3,10 @@
 Created with CodeSandbox
 
 - TODO
-- Add some tests
 - Practice CSS
 - How could async can be handled properly or more elegently
+- performance on context api / test
+  https://codesandbox.io/s/ynn88nx9x?from-embed=&file=/src/count-context.js
 
 - thoughts about use async hook
   https://usehooks.com/useAsync/

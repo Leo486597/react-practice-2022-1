@@ -121,5 +121,11 @@ export const initializeGlobalContext = function (initialState = {}) {
 };
 
 export const useGlobalContext = function () {
-  return React.useContext(GlobalContext);
+  const context = React.useContext(GlobalContext);
+
+  if (!context) {
+    throw new Error(`GlobalContext must be used under a provider`);
+  }
+
+  return context;
 };
