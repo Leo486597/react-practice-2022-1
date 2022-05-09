@@ -2,26 +2,29 @@ import React from "react";
 import styled from "styled-components";
 import { globalReducerActions, useGlobalContext } from "../useGlobalContext";
 
-const StyledAppBar = styled.div`
-  height: 100;
-  display: flex;
-  /* border: 1px solid black; */
-  justify-content: space-around;
-`;
+// const StyledAppBar = styled.div`
+//   height: 100;
+//   display: flex;
+//   /* border: 1px solid black; */
+//   justify-content: space-around;
+// `;
 
 export function AppBar() {
-  const { dispatch } = useGlobalContext();
+  const { dispatch, onClickCallback } = useGlobalContext();
 
   return (
-    <StyledAppBar>
-      <p>Coinbase </p>
+    <div>
+      <p>coinbase</p>
       <button
         onClick={() => {
+          console.log("toggle button triggered!");
           dispatch({ type: globalReducerActions.toggleTheme });
         }}
       >
         toggle theme
       </button>
-    </StyledAppBar>
+
+      <button onClick={onClickCallback}>toggle theme 2</button>
+    </div>
   );
 }

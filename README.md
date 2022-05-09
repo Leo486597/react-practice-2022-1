@@ -7,6 +7,8 @@ Created with CodeSandbox
 - How could async can be handled properly or more elegently
 - performance on context api / test
   https://codesandbox.io/s/ynn88nx9x?from-embed=&file=/src/count-context.js
+- learn render pattern
+  https://www.patterns.dev/posts/hoc-pattern/#0
 
 - thoughts about use async hook
   https://usehooks.com/useAsync/

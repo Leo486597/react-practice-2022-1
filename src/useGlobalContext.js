@@ -35,7 +35,7 @@ export const globalReducerActions = {
 
 const mockLoadMetaDataAsync = async function () {
   const mockUserPermissions = {
-    usecase1: false
+    usecase1: true
   };
 
   return new Promise((resolve, reject) => {
